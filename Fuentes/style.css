@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Tocco';
+    src: local('Tocco Ultra Bold'), local('Tocco-Ultra-Bold'),
+        url('Tocco-UltraBold.woff2') format('woff2'),
+        url('Tocco-UltraBold.woff') format('woff'),
+        url('Tocco-UltraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }

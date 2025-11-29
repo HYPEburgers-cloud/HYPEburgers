@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+
+    <!-- LINK AL CSS -->
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <!-- HEADER SUPERIOR -->
+    <header class="header">
+        <button class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+        <img src="Imagenes/Logo.png" class="logo" alt="Hype Burgers">
+    </header>
+
+    <!-- BARRA DE DOS BOTONES -->
+    <div class="top-buttons">
+        <div class="top-btn">Contáctanos</div>
+        <div class="divider"></div>
+        <div class="top-btn">Recomendados</div>
+    </div>
+
+    <!-- NAV SCROLLABLE CON FLECHAS -->
+    <div class="nav-wrapper">
+
+        <button class="nav-arrow left" onclick="scrollNav(-150)">❮</button>
+
+        <nav class="nav-scroll" id="navScroll">
+            <a href="#">Entradas</a>
+            <a href="#">Fries</a>
+            <a href="#">Especiales</a>
+            <a href="#">Burgers de autor</a>
+            <a href="#">Burgers clásicas</a>
+            <a href="#">Burgers dobles</a>
+            <a href="#">Burgers triples</a>
+            <a href="#">Perros</a>
+            <a href="#">Minis</a>
+            <a href="#">Tenders</a>
+            <a href="#">Combos</a>
+            <a href="#">Adiciones</a>
+            <a href="#">Cócteles</a>
+            <a href="#">Granizados</a>
+            <a href="#">Bebidas</a>
+        </nav>
+
+        <button class="nav-arrow right" onclick="scrollNav(150)">❯</button>
+    </div>
+
+<!-- ===== BANNER ===== 
+
+<div class="banner">-->
+
+    <!-- Imagen (usa esta SI quieres imagen) -->
+    <img src="Imagenes\3Especiales\especiales.jfif" class="banner-media" id="banner-img">
+
+    <!-- Video (usa esta SI quieres video) -->
+    <video class="banner-media" id="banner-video" autoplay muted loop playsinline>
+        <source src="video/banner.mp4" type="video/mp4">
+    </video>
+
+
+
+
+
+
+<!-- IMAGEN DE SECCIÓN + TEXTO -->
+<div class="section-block">
+    <img src="Imagenes\Secciones\entradas.webp" class="section-image" alt="Sección">
+    <p class="section-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+</div>
+
+
+
+
+
+
+
+
+<script>
+    // DESAPARECER LOGO CON SCROLL
+    document.addEventListener("scroll", () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 40) {
+            header.classList.add("hide");
+        } else {
+            header.classList.remove("hide");
+        }
+    });
+
+    // SCROLL NAV
+    function scrollNav(amount) {
+        document.getElementById("navScroll").scrollBy({
+            left: amount,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+<script>
+document.addEventListener("scroll", () => {
+    const topButtons = document.querySelector(".top-buttons");
+    const navWrapper = document.querySelector(".nav-wrapper");
+
+    if (window.scrollY > 80) {
+        // hacer sticky
+        topButtons.classList.add("sticky");
+        navWrapper.classList.add("sticky");
+
+        // insertar espaciador si no existe
+        if (!document.querySelector(".sticky-spacer")) {
+            const spacer = document.createElement("div");
+            spacer.classList.add("sticky-spacer");
+            document.body.insertBefore(spacer, document.querySelector(".banner"));
+        }
+
+    } else {
+        // quitar sticky
+        topButtons.classList.remove("sticky");
+        navWrapper.classList.remove("sticky");
+
+        // quitar espaciador
+        const spacer = document.querySelector(".sticky-spacer");
+        if (spacer) spacer.remove();
+    }
+});
+</script>
+
+
+</body>
+</html>

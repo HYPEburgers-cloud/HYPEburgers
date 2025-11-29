@@ -1,0 +1,134 @@
+/* Fuente global */
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    height: 100%;
+}
+
+/* FONDO REAL */
+body {
+    background-image: url("Imagenes/fondonubes.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* hace el efecto bonito */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenido {
+    width: 100%;
+    max-width: 420px;
+    margin: 40px auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* LOGO */
+.logo {
+    width: 75%;
+    max-width: 260px;
+    margin: 0 auto 28px auto;
+    display: block;
+}
+
+/* BOTONES */
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn {
+    display: block;
+    width: 82%;
+    max-width: 320px;
+    padding: 14px 0;
+    text-decoration: none;
+    color: #fff;
+    background: #8b43c7;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0 3px 8px rgba(139, 67, 199, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* INSTAGRAM */
+.instagram img {
+    width: 44px;
+    margin: 34px auto 10px;
+    display: block;
+}
+
+/* FOOTER */
+.footer {
+    color: #5a5a5a;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* MOBILE */
+@media (max-width: 420px) {
+    .contenido { padding-top: 18px; }
+    .logo { width: 78%; }
+    .btn { font-size: 16px; width: 88%; }
+}
+
+/* ===== BANNER ===== */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 260px;   /* Ajusta la altura */
+    overflow: hidden;
+    margin-top: 10px; /* Separación después de nav-scroll */
+}
+
+/* Foto o video */
+.banner-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Oscurecer un poco para que se lea el texto */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+}
+
+/* Texto encima */
+.banner-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.banner-text h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.banner-text p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
