@@ -150,7 +150,7 @@ body {
 
 /* ===== BANNER ===== */
 .banner-media {
-    width: 100%;
+    width: 111%;
     height: auto;
     display: block;
     object-fit: contain;
@@ -783,5 +783,6 @@ body::before {
     background: #5a3490;
 
 }
+
 
 
