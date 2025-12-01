@@ -1,6 +1,6 @@
 /* ====== LOGO CENTRADO ====== */
 .logo {
-   
+   position: absolute; 
     left: 50%;
     transform: translateX(-50%);
     top: 8;
@@ -783,3 +783,4 @@ body::before {
     background: #5a3490;
 
 }
+
