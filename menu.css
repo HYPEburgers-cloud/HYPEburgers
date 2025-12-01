@@ -1,6 +1,6 @@
 /* ====== LOGO CENTRADO ====== */
 .logo {
-    position: absolute;
+   
     left: 50%;
     transform: translateX(-50%);
     top: 8;
@@ -781,4 +781,5 @@ body::before {
 
 .search-results::-webkit-scrollbar-thumb:hover {
     background: #5a3490;
+
 }
