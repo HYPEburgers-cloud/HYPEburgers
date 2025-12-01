@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú</title>
-
-    <!-- LINK AL CSS -->
     <link rel="stylesheet" href="menu.css">
 </head>
 <body>
@@ -13,70 +11,1539 @@
     <!-- HEADER SUPERIOR -->
     <header class="header">
         <button class="menu-btn">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
-
-        <img src="Imagenes/Logo.png" class="logo" alt="Hype Burgers">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <img href="index.html" src="Imagenes/Logo.png" class="logo" alt="Hype Burgers">
     </header>
 
     <!-- BARRA DE DOS BOTONES -->
+   <!-- BARRA DE DOS BOTONES -->
     <div class="top-buttons">
-        <div class="top-btn">Contáctanos</div>
+        <div class="top-btn" onclick="openContact()">Contáctanos</div>
         <div class="divider"></div>
         <div class="top-btn">Recomendados</div>
     </div>
 
     <!-- NAV SCROLLABLE CON FLECHAS -->
     <div class="nav-wrapper">
-
         <button class="nav-arrow left" onclick="scrollNav(-150)">❮</button>
-
         <nav class="nav-scroll" id="navScroll">
-            <a href="#">Entradas</a>
-            <a href="#">Fries</a>
-            <a href="#">Especiales</a>
-            <a href="#">Burgers de autor</a>
-            <a href="#">Burgers clásicas</a>
-            <a href="#">Burgers dobles</a>
-            <a href="#">Burgers triples</a>
-            <a href="#">Perros</a>
-            <a href="#">Minis</a>
-            <a href="#">Tenders</a>
-            <a href="#">Combos</a>
-            <a href="#">Adiciones</a>
-            <a href="#">Cócteles</a>
-            <a href="#">Granizados</a>
-            <a href="#">Bebidas</a>
+            <a href="#entradas">Entradas</a>
+            <a href="#fries">Fries</a>
+            <a href="#especiales">Especiales</a>
+            <a href="#burgers-autor">Burgers de autor</a>
+            <a href="#burgers-clasicas">Burgers clásicas</a>
+            <a href="#burgers-dobles">Burgers dobles</a>
+            <a href="#burgers-triples">Burgers triples</a>
+            <a href="#perros">Perros</a>
+            <a href="#minis">Minis</a>
+            <a href="#tenders">Tenders</a>
+            <a href="#combos">Combos</a>
+            <a href="#adiciones">Adiciones</a>
+            <a href="#cocteles">Cócteles</a>
+            <a href="#granizados">Granizados</a>
+            <a href="#bebidas">Bebidas</a>
         </nav>
-
         <button class="nav-arrow right" onclick="scrollNav(150)">❯</button>
     </div>
 
-<!-- ===== BANNER ===== 
-
-<div class="banner">-->
-
-    <!-- Imagen (usa esta SI quieres imagen) -->
-    <img src="Imagenes\3Especiales\especiales.jfif" class="banner-media" id="banner-img">
-
-    <!-- Video (usa esta SI quieres video) -->
-    <video class="banner-media" id="banner-video" autoplay muted loop playsinline>
-        <source src="video/banner.mp4" type="video/mp4">
-    </video>
+    <!-- BANNER -->
+    <img src="Imagenes/Especial de la semana/ESPECIAL DE LA SEMANA.png" class="banner-media" id="banner-img">
 
 
+    <!-- ===== SECCIÓN ENTRADAS ===== -->
+    <section class="category-section" id="entradas">
+        <div class="section-block entradas-block">
+            <img src="Imagenes\Secciones\entradas.webp" class="section-image entradas-image" alt="Entradas">
+            <p class="section-text entradas-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes\1 Entradas\MAZORCA AHUMADA.png" class="product-img">
+                <h3 class="product-title">MAZORCA AHUMADA</h3>
+                <p class="product-desc">
+                    🌽Mazorca ahumada x6 🥗Tártara
+                    🥓Tocineta crispy 🧀Queso costeño rallado
+                </p>
+                <p class="product-price">18.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SECCIÓN FRIES ===== -->
+    <section class="category-section" id="fries">
+        <div class="section-block fries-block">
+            <img src="Imagenes/Secciones/fries.webp" class="section-image fries-image" alt="Fries">
+            <p class="section-text fries-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes\2 Fries\HYPE FRIES.webp" class="product-img">
+                <h3 class="product-title">HYPE FRIES</h3>
+                <p class="product-desc">Carne de 180gr, doble bacon, 360gr de papa, Mix de quesos y dulce de vinagre de manzana</p>
+                <p class="product-price">26.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes\2 Fries\CHEESE FRIES.webp" class="product-img">
+                <h3 class="product-title">CHEESE FRIES</h3>
+                <p class="product-desc">Papa x300grs Salsa de queso Mozzarela y crema de leche Pechuga salteada en mantequilla y pimienta Cilantro Tocineta crispy</p>
+                <p class="product-price">28.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes\2 Fries\BACON FRIES.webp" class="product-img">
+                <h3 class="product-title">BACON FRIES</h3>
+                <p class="product-desc">300 grs de papa Salsa de cheddar artesanal Tocineta krispy</p>
+                <p class="product-price">19.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+ <!-- ===== SECCIÓN ESPECIALES ===== -->
+    <section class="category-section" id="especiales">
+        <div class="section-block especiales-block">
+            <img src="Imagenes/Secciones/especiales.webp" class="section-image especiales-image" alt="Especiales">
+            <p class="section-text especiales-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/3Especiales/especialde la semana.png" class="product-img">
+                <h3 class="product-title">ESPECIAL 1</h3>
+                <p class="product-desc">🍞Pan de mantequilla 
+                    🥩Carne de 180grs
+                    🧀Mix de quesos 
+                    🫕Cuajada maserada con dulce de uchuvas 
+                    🐥Pollo ahumado en salsa de pimentón 
+                    🥒Pepino, tomate y Batavia frescos 
+
+                    Acompañamientos. 
+                    🥗Tártara 
+                    🍍Piña
+                    🍀Mayo verde
+                    🍟Papa frita x170grs</p>
+                <p class="product-price">28.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/3Especiales/none.webp" class="product-img">
+                <h3 class="product-title">ESPECIAL DOBLE</h3>
+                <p class="product-desc">PÍDELO DOBLE CARNE PÍDELO MIXTO </p>
+                <p class="product-price">37.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>  
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/3Especiales/none.webp" class="product-img">
+                <h3 class="product-title">ESPECIAL TRIPLE</h3>
+                <p class="product-desc">PÍDELO CON DOS CARNES Y POLLO PÍDELO CON TRES CARNES</p>
+                <p class="product-price">44.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+<!-- ===== SECCIÓN BURGERS DE AUTOR ===== -->
+    <section class="category-section" id="burgers-autor">
+        <div class="section-block burgers-autor-block">
+            <img src="Imagenes/Secciones/burgers-autor.webp" class="section-image burgers-autor-image" alt="Burgers de Autor">
+            <p class="section-text burgers-autor-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes\4burgers  de autor\MIXTA POLLO DESMECHADO.webp" class="product-img">
+                <h3 class="product-title">MIXTA POLLO DESMECHADO</h3>
+                <p class="product-desc">🍞Pan HYPE
+                    🥩Carne de 180grs 
+                    🐔Pollo desmechado en tártara y sal ahumada x 180grs 
+                    🧀Mix de quesos 
+                    🥓Tocineta x3 
+                    🧅Cebolla caramelizada 
+
+                    Acompañamientos:
+                    🥗Tártara 
+                    🍍Piña
+                    🍀Mayo verde
+                    🍟Papa x 160grs</p>
+                <p class="product-price">30.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes\4burgers  de autor\73d5f842-87c7-4812-8aa0-0987281e1c0e (2).webp" class="product-img">
+                <h3 class="product-title">STRIPPED</h3>
+                <p class="product-desc">🥖Pan HYPE
+                    🥩Carne de 180grs 
+                    🧀Mix de quesos 
+                    🥓Doble tocineta 
+                    🥒Pepinillos agridulces
+                    🧅Aros de cebolla x3
+
+                    Acompañamientos:
+                    🥗Tártara 
+                    🍍Piña 
+                    🍀Mayo verde
+                    🍟Papa frita x160grs</p>
+                <p class="product-price">27.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/4burgers  de autor/COSTE.webp" class="product-img">
+                <h3 class="product-title">COSTEÑA</h3>
+                <p class="product-desc">🍞Pan HYPE
+                    🥩Carne de 180grs
+                    🧀Mix de quesos
+                    🍌Plátano maduro x5
+                    🥓Tocineta x3
+                    🧀Queso costeño frito x2
+                    🥗Tártara 
+                    Acompañamientos:
+                    🥗Tártara
+                    🍍Piña
+                    💚Mayo verde</p>
+                <p class="product-price">31.400</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/4burgers  de autor/CHICKEN APANADA.webp" class="product-img">
+                <h3 class="product-title">CHICKEN APANADA</h3>
+                <p class="product-desc">🍞Pan HYPE
+                    🍗Croqueta apanada x200grs
+                    🥒Pepinillos 
+                    🥓Tocineta x3
+                    🧀Queso blanco x2
+                    🧅Cebolla caramelizada 
+
+                    Acompañamientos.
+                    🥗Tártara
+                    🍍Piña
+                    💚Mayo verde
+                    🍟Papa x160grs</p>
+                <p class="product-price">29.400</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+            
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/4burgers  de autor/PIMI.webp" class="product-img">
+                <h3 class="product-title">PIMI</h3>
+                <p class="product-desc">🥖Pan HYPE
+                    🥩Carne de 180grs 
+                    🧀Mix de quesos 
+                    🥓Doble tocineta 
+                    🫑Mermelada de pimentón 
+                    🫕Queso crema 
+
+                    Acompañamientos: 
+                    🥗Tártara 
+                    🍍Piña 
+                    🍀Mayo verde 
+                    🍟Papa frita x 160grs</p>
+                <p class="product-price">28.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SECCIÓN BURGERS CLÁSICAS ===== -->
+    <section class="category-section" id="burgers-clasicas">
+        <div class="section-block burgers-clasicas-block">
+            <img src="Imagenes/Secciones/burgersclasicas.webp" class="section-image burgers-clasicas-image" alt="Burgers Clásicas">
+            <p class="section-text burgers-clasicas-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/5Burgers Clasicas/clasica.webp" class="product-img">
+                <h3 class="product-title">CLÁSICA </h3>
+                <p class="product-desc">🥖Pan HYPE 
+                                        🥩Carne de 180grs 
+                                        🧀Mix de quesos 
+                                        🥓Tocinetax2 
+                                        🧅Cebolla caramelizada 
+
+                                        Acompañamientos: 
+                                        🥗Tártara 
+                                        🍍Piña 
+                                        🍀Mayo verde 
+                                        🍟Papa frita x 160grs</p>
+                <p class="product-price">23.800</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/5Burgers Clasicas/carnivora.webp" class="product-img">
+                <h3 class="product-title">CARNÍVORA</h3>
+                <p class="product-desc">🥖Pan HYPE 
+                                        🥩Carne de 180grs 
+                                        🧀Mix de quesos 
+                                        🥓Doble Tocineta 
+                                        🧅Cebolla caramelizada
+                                        🌭chorizo ahumado 
+
+                                        Acompañamientos: 
+                                        🥗Tártara 
+                                        🍍Piña 
+                                        🍀Mayo verde 
+                                        🍟Papa frita x 160grs</p>
+                <p class="product-price">27.800</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/5Burgers Clasicas/CHICKEN.webp" class="product-img">
+                <h3 class="product-title">CHICKEN</h3>
+                <p class="product-desc">🥖Pan HYPE  
+                                        🐔Croqueta de pechuga de 200grs
+                                        🧀Mix de quesos 
+                                        🥓Doble Tocineta 
+                                        🧅Cebolla caramelizada 
+                                        🧅2 Aros de cebolla apandos
+                                        🥒Pepinillos 
+
+                                        Acompañamientos: 
+                                        🥗Tártara 
+                                        🍍Piña 
+                                        🍀Mayo verde 
+                                        🍟Papa frita x 160grs
+                                        .</p>
+                <p class="product-price">27.500</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/5Burgers Clasicas/PORK.webp" class="product-img">
+                <h3 class="product-title">PORK</h3>
+                <p class="product-desc">🥖Pan HYPE  
+                                        🐷Croqueta de cerdo de 180grs
+                                        🧀Mix de quesos 
+                                        🥓Tocineta krispy (en el pan y fuera de ella) 
+                                        🧅Cebolla caramelizada 
+
+                                        Acompañamientos: 
+                                        🥗Tártara 
+                                        🍍Piña 
+                                        🍀Mayo verde 
+                                        🍟Papa frita x 160grs</p>
+                <p class="product-price">27.400</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SECCIÓN BURGERS DOBLES ===== -->
+    <section class="category-section" id="burgers-dobles">
+        <div class="section-block burgers-dobles-block">
+            <img src="Imagenes/Secciones/burgers dobles.webp" class="section-image burgers-dobles-image" alt="Burgers Dobles">
+            <p class="section-text burgers-dobles-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/6Burgers Dobles/CLÁSICA DOBLE.webp" class="product-img">
+                <h3 class="product-title">CLÁSICA DOBLE</h3>
+                <p class="product-desc">🥖Pan HYPE
+🥩Doble Carne de 180grs 
+🧀Doble Mix de quesos 
+🥓Doble Tocineta 
+🧅Cebolla caramelizada 
+
+Acompañamientos: 
+🥗Tártara 
+🍍Piña 
+🍀Mayo verde 
+🍟Papa frita x 160grs</p>
+                <p class="product-price">31.400</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/6Burgers Dobles/CARNÍVORA DOBLE.webp" class="product-img">
+                <h3 class="product-title">CARNÍVORA DOBLE</h3>
+                <p class="product-desc">🥖Pan HYPE
+🥩Doble Carne de 180grs 
+🧀Doble Mix de quesos 
+🥓Doble Tocineta 
+🧅Cebolla caramelizada 
+🌭Chorizo ahumado 
+
+Acompañamientos: 
+🥗Tártara 
+🍍Piña 
+🍀Mayo verde 
+🍟Papa frita x 160grs</p>
+                <p class="product-price">32.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/6Burgers Dobles/MIXTA BABY.webp" class="product-img">
+                <h3 class="product-title">MIXTA BABY</h3>
+                <p class="product-desc">🥖Pan HYPE
+🥩Carne de 180grs 
+🐔Croqueta de pechuga de 200grs
+🧀Mix de quesos 
+🥓Doble Tocineta 
+🧅Cebolla caramelizada 
+
+
+Acompañamientos: 
+🥗Tártara 
+🍍Piña 
+🍀Mayo verde 
+🍟Papa frita x 160grs</p>
+                <p class="product-price">31.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/6Burgers Dobles/DOBLE CHICKEN.webp" class="product-img">
+                <h3 class="product-title">DOBLE CHICKEN</h3>
+                <p class="product-desc">🥖Pan HYPE 
+🐔Doble Croqueta de pechuga de 200grs
+🧀Doble Mix de quesos 
+🥓Doble Tocineta 
+🧅Cebolla caramelizada
+
+Acompañamientos: 
+🥗Tártara 
+🍍Piña 
+🍀Mayo verde 
+🍟Papa frita x 160grs</p>
+                <p class="product-price">31.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SECCIÓN BURGERS TRIPLES ===== -->
+    <section class="category-section" id="burgers-triples">
+        <div class="section-block burgers-triples-block">
+            <img src="Imagenes/Secciones/burgers triples.webp" class="section-image burgers-triples-image" alt="Burgers Triples">
+            <p class="section-text burgers-triples-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/7Burgers Triples/TRIPLE FLOW.webp" class="product-img">
+                <h3 class="product-title">TRIPLE FLOW</h3>
+                <p class="product-desc">🥖Pan HYPE
+🥩Doble Carne de 180grs 
+🐔Croqueta de pechuga de 200grs
+🧀Triple Mix de quesos 
+🥓Triple Tocineta 
+🧅Cebolla caramelizada 
+
+Acompañamientos: 
+🥗Tártara 
+🍍Piña 
+🍀Mayo verde 
+🍟Papa frita x 160grs</p>
+                <p class="product-price">42.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+<!--
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/7burgers-triples/triple2.webp" class="product-img">
+                <h3 class="product-title">TRIPLE BACON MONSTER</h3>
+                <p class="product-desc">🍞Pan HYPE
+                    🥩Triple carne de 180grs c/u
+                    🧀Mix de quesos x3
+                    🥓Triple tocineta x9
+                    🧅Aros de cebolla
+                    
+                    Acompañamientos:
+                    🥗Tártara
+                    🍍Piña
+                    🍀Mayo verde
+                    🍟Papa x160grs</p>
+                <p class="product-price">47.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/7burgers-triples/triple3.webp" class="product-img">
+                <h3 class="product-title">TRIPLE MIXTA SUPREME</h3>
+                <p class="product-desc">🍞Pan HYPE
+                    🥩Doble carne de 180grs c/u
+                    🐔Pollo desmechado 180grs
+                    🧀Mix de quesos x3
+                    🥓Tocineta x6
+                    
+                    Acompañamientos:
+                    🥗Tártara
+                    🍍Piña
+                    🍀Mayo verde
+                    🍟Papa x160grs</p>
+                <p class="product-price">44.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/7burgers-triples/triple4.webp" class="product-img">
+                <h3 class="product-title">TRIPLE COSTEÑA XXL</h3>
+                <p class="product-desc">🍞Pan HYPE
+                    🥩Triple carne de 180grs c/u
+                    🧀Mix de quesos x3
+                    🍌Plátano maduro x8
+                    🧀Queso costeño x4
+                    🥓Tocineta x6
+                    
+                    Acompañamientos:
+                    🥗Tártara
+                    🍟Papa x160grs</p>
+                <p class="product-price">49.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+-->
+    
+
+    <!-- ===== SECCIÓN PERROS ===== -->
+    <section class="category-section" id="perros">
+        <div class="section-block perros-block">
+            <img src="Imagenes/Secciones/perros.webp" class="section-image perros-image" alt="Perros">
+            <p class="section-text perros-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/8Perros/PERRO HYPE.webp" class="product-img">
+                <h3 class="product-title">PERRO HYPE</h3>
+                <p class="product-desc">🌭Pan HYPE perro
+ 🌭Salchicha americana 
+ 🐔Pollo desmechado 
+ 🥗Tártara 
+ 🥓Tocineta crispy 
+🧀Salsa de queso
+25.900</p>
+                <p class="product-price">25.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/8Perros/CRUNCHY DOG.webp" class="product-img">
+                <h3 class="product-title">CRUNCHY DOG</h3>
+                <p class="product-desc">🥖Pan hype
+🐔Pollo apanado x130grs 
+🥗Salsa tártara 
+🥒Pepinillos agridulces encurtidos
+🧀Queso costeño 
+🍅Bbq artesanal (la misma de las minis)
+
+Acompañamientos.
+🥗Tártara 
+💚Mayo verde 
+🍍Piña
+🍟Papa frita x170grs</p>
+                <p class="product-price">23.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+<!--
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/8perros/perro3.webp" class="product-img">
+                <h3 class="product-title">PERRO COSTEÑO</h3>
+                <p class="product-desc">🌭Pan de perro
+                    🌭Salchicha premium
+                    🧀Queso costeño x2
+                    🍌Plátano maduro
+                    🥓Tocineta x3
+                    🥫Salsas de la casa
+                    
+                    Acompañamientos:
+                    🥗Tártara
+                    🍟Papa x140grs</p>
+                <p class="product-price">19.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+-->
+    <!-- ===== SECCIÓN MINIS ===== -->
+    <section class="category-section" id="minis">
+        <div class="section-block minis-block">
+            <img src="Imagenes/Secciones/minis.webp" class="section-image minis-image" alt="Minis">
+            <p class="section-text minis-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/9Minis/572d17b8-898d-4487-adf6-9ea8d576b533.webp" class="product-img">
+                <h3 class="product-title">MINI HYPES X10</h3>
+                <p class="product-desc">10 mini HYPE con Bbq artesanal </p>
+                <p class="product-price">SIN PAPA | 40.900 </p>
+                <p class="product-price">CON PAPA| 46.900</p> 
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/9Minis/236dd2b7-c1e4-4bb2-abfe-ccda72a8b008.webp" class="product-img">
+                <h3 class="product-title">MINIS MIXTAS X10</h3>
+                <p class="product-desc">5 MINI HYPE DE CARNE 5 MINI HYPE DE POLLO </p>
+                <p class="product-price">SIN PAPA| 40.900 </p>
+                <p class="product-price">CON PAPA| 46.900</p> 
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/none.webp" class="product-img">
+                <h3 class="product-title">MINIS X5 SOLO CARNE</h3>
+    <!--        <p class="product-desc"></p>                -->
+                <p class="product-price">SIN PAPA|20.900</p>
+                <p class="product-price">CON PAPA|26.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/none.webp" class="product-img">
+                <h3 class="product-title">MINIS DE ESPECIAL X5</h3>
+                <p class="product-desc">5 MINIS DE ESPECIAL</p>
+                <p class="product-price">SIN PAPA|33.900</p>
+                <p class="product-price">CON PAPA|39.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SECCIÓN TENDERS ===== -->
+    <section class="category-section" id="tenders">
+        <div class="section-block tenders-block">
+            <img src="Imagenes/Secciones/tenders.webp" class="section-image tenders-image" alt="Tenders">
+            <p class="section-text tenders-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/10Tenders/CHICKEN TENDERS.webp" class="product-img">
+                <h3 class="product-title">CHICKEN TENDERS</h3>
+                <p class="product-desc">🐔Pollo HYPE apanado x5 🍟Papa x160grs </p>
+                <p class="product-price">26.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/10Tenders/DORITENDERS.webp" class="product-img">
+                <h3 class="product-title">DORITENDERS</h3>
+                <p class="product-desc">450GRS DE POLLITO HYPE BIEN JUGOSO
+UN VASO DE SALSA SWEET BBQ
+UNA COPA DE MIEL MAPLE PICOSA
+PAPA FRITA X170GRS</p>
+                <p class="product-price">33.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+            
+  <!--
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/10tenders/tender3.webp" class="product-img">
+                <h3 class="product-title">TENDERS BUFFALO x5</h3>
+                <p class="product-desc">🍗Tenders apanados x5
+                    🌶️Salsa buffalo picante
+                    🧀Aderezo ranch
+                    
+                    Acompañamientos:
+                    🥗Tártara
+                    🍍Piña
+                    🍟Papa x160grs</p>
+                <p class="product-price">25.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/10tenders/tender4.webp" class="product-img">
+                <h3 class="product-title">TENDERS BBQ x8</h3>
+                <p class="product-desc">🍗Tenders apanados x8
+                    🍯Salsa BBQ especial
+                    🧅Aros de cebolla x4
+                    
+                    Acompañamientos:
+                    🥗Tártara
+                    🍍Piña
+                    🍟Papa x180grs</p>
+                <p class="product-price">34.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+ -->
+
+    <!-- ===== SECCIÓN COMBOS ===== -->
+    <section class="category-section" id="combos">
+        <div class="section-block combos-block">
+            <img src="Imagenes/Secciones/combos.webp" class="section-image combos-image" alt="Combos">
+            <p class="section-text combos-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/11Combos/COMBO DOBLE.webp" class="product-img">
+                <h3 class="product-title">COMBO DOBLE</h3>
+                <p class="product-desc">1 CLASICA DOBLE
+1 CARNIVORA DOBLE
+1 MIXTA BABY
+TODAS TRAEN PAPA
+3 GASEOSAS PET250</p>
+                <p class="product-price">90.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/11Combos/COMBO FAMI.webp" class="product-img">
+                <h3 class="product-title">COMBO FAMI</h3>
+                <p class="product-desc">1 CLASICA
+1 CARNIVORA
+1 CHICKEN
+TODAS TRAEN PAPA
+3 GASEOSAS PET250</p>
+                <p class="product-price">73.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/11Combos/COMBO PIMI STRIPPED.webp" class="product-img">
+                <h3 class="product-title">COMBO PIMI STRIPPED</h3>
+                <p class="product-desc">1 PIMI 
+1 STRIPPED 
+1 BACON FRIES 
+ 2 GASEOSA PET250</p>
+                <p class="product-price">70.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/11Combos/COMBO MASTER.webp" class="product-img">
+                <h3 class="product-title">COMBO MASTER</h3>
+                <p class="product-desc">1 CLASICA 
+1 CARNÍVORA 
+TODAS TRAEN PAPA
+2 BEBIDAS PET250. </p>
+                <p class="product-price">51.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/11Combos/COMBO DEPECHE.webp" class="product-img">
+                <h3 class="product-title">COMBO DEPECHE</h3>
+                <p class="product-desc">2 CARNIVORAS
+1 HOMIES FRIES
+LAS BURGERS TRAEN PAPA
+3 GASEOSAS PET250</p>
+                <p class="product-price">75.900</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SECCIÓN ADICIONES ===== -->
+    <section class="category-section" id="adiciones">
+        <div class="section-block adiciones-block">
+            <img src="Imagenes/Secciones/adiciones.webp" class="section-image adiciones-image" alt="Adiciones">
+            <p class="section-text adiciones-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">CARNE</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">8.600</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">POLLO</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">8.600</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">BACON</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">3.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+           <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">MIX DE QUESO</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">3.500</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">PAPA</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">6.500</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">CHORIZO</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">4.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">TOCINETA KRISPY</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">4.350</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">POLLO DESMECHADO</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">9.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">AROS DE CEBOLLA</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">3.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">PEPINILLOS</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">2.200</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">MADURO FRITO</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">4.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">QUESO COSTEÑO FRITO</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">4.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">QUESO PIMI</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">4.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">POLLO APANADO</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">9.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SECCIÓN CÓCTELES ===== -->
+    <section class="category-section" id="cocteles">
+        <div class="section-block cocteles-block">
+            <img src="Imagenes/Secciones/cocteles.webp" class="section-image cocteles-image" alt="Cócteles">
+            <p class="section-text cocteles-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/12Cocteles/CHERRY BOMB.webp" class="product-img">
+                <h3 class="product-title">CHERRY BOMB</h3>
+                <p class="product-desc">Almíbar de cereza, ron, limón, triple sec</p>
+                <p class="product-price">20.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/12Cocteles/APEROL HOMIES.webp" class="product-img">
+                <h3 class="product-title">APEROL HOMIES</h3>
+                <p class="product-desc">Zumo de naranja, almíbar, aperol, vino espumoso, soda y hielo </p>
+                <p class="product-price">23.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/12Cocteles/MOSCOW MULE.webp" class="product-img">
+                <h3 class="product-title">MOSCOW MULE</h3>
+                <p class="product-desc">Vodka, Zumo de limón,  Ginger beer</p>
+                <p class="product-price">21.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/12Cocteles/COSMOPOLITAN.webp" class="product-img">
+                <h3 class="product-title">COSMOPOLITAN</h3>
+                <p class="product-desc">Limon, vodka, jugo de arándanos, triple sec, almíbar</p>
+                <p class="product-price">18.00</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/12Cocteles/CUBA LIBRE.webp" class="product-img">
+                <h3 class="product-title">CUBA LIBRE</h3>
+                <p class="product-desc">Ron, Cocacola, zumo de limón</p>
+                <p class="product-price">16.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <img src="Imagenes/12Cocteles/1b4852e1-4e46-49b0-8c32-6a8ff3425b29.webp" class="product-img">
+                <h3 class="product-title">MARGARITA</h3>
+                <p class="product-desc">Tequila blanco, zumo de limón, triple sec</p>
+                <p class="product-price">16.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SECCIÓN GRANIZADOS ===== -->
+    <section class="category-section" id="granizados">
+        <div class="section-block granizados-block">
+            <img src="Imagenes/Secciones/granizados.webp" class="section-image granizados-image" alt="Granizados">
+            <p class="section-text granizados-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">LIMONADA DE COCO GRANIZADA</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">9.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">GRANIZADO DE MORA</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">6.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">GRANIZADO DE CEREZA</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">6.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+            <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
+                <h3 class="product-title">GRANIZADA DE MARACUYA</h3>
+            <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
+                <p class="product-price">7.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== SECCIÓN BEBIDAS ===== -->
+    <section class="category-section" id="bebidas">
+        <div class="section-block bebidas-block">
+            <img src="Imagenes/Secciones/bebidas.webp" class="section-image bebidas-image" alt="Bebidas">
+            <p class="section-text bebidas-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">LIMONADA DE PANELA</h3>
+                <p class="product-price">6.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">AGUA DE JAMAICA</h3>
+                <p class="product-price">6.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">LIMONADA DE MANGO</h3>
+                <p class="product-price">6.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">AGUA DE TAMARINDO</h3>
+                <p class="product-price">6.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">COCA COLA PET 400</h3>
+                <p class="product-price">5.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">COCA COLA ZERO</h3>
+                <p class="product-price">5.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">CORONITA</h3>
+                <p class="product-price">6.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">AGUA BRISA</h3>
+                <p class="product-price">5.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">AGUA CON GAS</h3>
+                <p class="product-price">5.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">SODA</h3>
+                <p class="product-desc">La puedes pedir con adición de limón por un costo de 2.000</p>
+                <p class="product-price">6.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">SPRITE</h3>
+                <p class="product-price">5.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">QUATRO</h3>
+                <p class="product-price">5.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">AGUA DE MANZANA O LIMÓN BRISA</h3>
+                <p class="product-price">5.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">JARRA DE FLOR DE JAMAICA</h3>
+                <p class="product-desc">PAX 4 porciones</p>
+                <p class="product-price">20.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">JARRA DE LIMONADA DE MANGO</h3>
+                <p class="product-desc">PAX 4 porciones</p>
+                <p class="product-price">20.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">JARRA DE LIMONADA DE PANELA</h3>
+                <p class="product-desc">PAX 4 porciones</p>
+                <p class="product-price">20.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">JARRA DE AGUA DE TAMARINDO</h3>
+                <p class="product-desc">PAX 4 porciones</p>
+                <p class="product-price">20.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+
+            <div class="product-card" onclick="expandCard(this)">
+                <h3 class="product-title">CERVEZA STELLA</h3>
+                <p class="product-price">8.000</p>
+                <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Fondo oscuro cuando se expande -->
+    <div id="overlay" class="overlay" onclick="closeCard()"></div>
+
+
+    <script>
+        // DESAPARECER LOGO CON SCROLL
+        document.addEventListener("scroll", () => {
+            const header = document.querySelector(".header");
+            if (window.scrollY > 40) {
+                header.classList.add("hide");
+            } else {
+                header.classList.remove("hide");
+            }
+        });
+
+        // SCROLL NAV
+        function scrollNav(amount) {
+            document.getElementById("navScroll").scrollBy({
+                left: amount,
+                behavior: "smooth"
+            });
+        }
+
+        // STICKY NAVIGATION
+        document.addEventListener("scroll", () => {
+            const topButtons = document.querySelector(".top-buttons");
+            const navWrapper = document.querySelector(".nav-wrapper");
+
+            if (window.scrollY > 80) {
+                topButtons.classList.add("sticky");
+                navWrapper.classList.add("sticky");
+
+                if (!document.querySelector(".sticky-spacer")) {
+                    const spacer = document.createElement("div");
+                    spacer.classList.add("sticky-spacer");
+                    document.body.insertBefore(spacer, document.querySelector(".banner-media"));
+                }
+            } else {
+                topButtons.classList.remove("sticky");
+                navWrapper.classList.remove("sticky");
+
+                const spacer = document.querySelector(".sticky-spacer");
+                if (spacer) spacer.remove();
+            }
+        });
+
+        // EXPANDIR TARJETA
+        function expandCard(card) {
+            card.classList.add("expanded");
+            document.getElementById("overlay").classList.add("active");
+        }
+
+        // CERRAR TARJETA
+        function closeCard() {
+            const expanded = document.querySelector(".product-card.expanded");
+            if (expanded) expanded.classList.remove("expanded");
+            document.getElementById("overlay").classList.remove("active");
+        }
+
+        // LIKE
+        function toggleLike(event, el) {
+            event.stopPropagation();
+            el.classList.toggle("liked");
+        }
+
+
+        // ABRIR VENTANA DE CONTACTO
+function openContact() {
+    document.getElementById("contactModal").classList.add("active");
+    document.getElementById("overlay").classList.add("active");
+}
+
+// CERRAR VENTANA DE CONTACTO
+function closeContact() {
+    document.getElementById("contactModal").classList.remove("active");
+    if (!document.querySelector(".product-card.expanded")) {
+        document.getElementById("overlay").classList.remove("active");
+    }
+}
+
+// TOGGLE HORARIOS
+function toggleSchedule() {
+    const moreSchedule = document.getElementById("moreSchedule");
+    const toggleText = document.getElementById("scheduleToggleText");
+    
+    if (moreSchedule.classList.contains("show")) {
+        moreSchedule.classList.remove("show");
+        toggleText.textContent = "Ver más...";
+    } else {
+        moreSchedule.classList.add("show");
+        toggleText.textContent = "Ver menos";
+    }
+}
+
+// CERRAR TARJETA
+function closeCard() {
+    const expanded = document.querySelector(".product-card.expanded");
+    const contactModal = document.getElementById("contactModal");
+    
+    if (expanded) expanded.classList.remove("expanded");
+    if (contactModal.classList.contains("active")) {
+        contactModal.classList.remove("active");
+    }
+    
+    document.getElementById("overlay").classList.remove("active");
+}
+
+
+
+        // DESAPARECER LOGO CON SCROLL
+        document.addEventListener("scroll", () => {
+            const header = document.querySelector(".header");
+            if (window.scrollY > 40) {
+                header.classList.add("hide");
+            } else {
+                header.classList.remove("hide");
+            }
+        });
+
+        // SCROLL NAV
+        function scrollNav(amount) {
+            document.getElementById("navScroll").scrollBy({
+                left: amount,
+                behavior: "smooth"
+            });
+        }
+
+        // STICKY NAVIGATION
+        document.addEventListener("scroll", () => {
+            const topButtons = document.querySelector(".top-buttons");
+            const navWrapper = document.querySelector(".nav-wrapper");
+
+            if (window.scrollY > 80) {
+                topButtons.classList.add("sticky");
+                navWrapper.classList.add("sticky");
+
+                if (!document.querySelector(".sticky-spacer")) {
+                    const spacer = document.createElement("div");
+                    spacer.classList.add("sticky-spacer");
+                    document.body.insertBefore(spacer, document.querySelector(".banner-media"));
+                }
+            } else {
+                topButtons.classList.remove("sticky");
+                navWrapper.classList.remove("sticky");
+
+                const spacer = document.querySelector(".sticky-spacer");
+                if (spacer) spacer.remove();
+            }
+        });
+
+        // EXPANDIR TARJETA
+        function expandCard(card) {
+            card.classList.add("expanded");
+            document.getElementById("overlay").classList.add("active");
+        }
+
+        // CERRAR TARJETA
+        function closeCard() {
+            const expanded = document.querySelector(".product-card.expanded");
+            if (expanded) expanded.classList.remove("expanded");
+            document.getElementById("overlay").classList.remove("active");
+        }
+
+        // LIKE
+        function toggleLike(event, el) {
+            event.stopPropagation();
+            el.classList.toggle("liked");
+            
+            // Guardar en localStorage
+            saveLikes();
+        }
+
+        // GUARDAR LIKES EN LOCALSTORAGE
+        function saveLikes() {
+            const likedProducts = [];
+            document.querySelectorAll(".product-fav.liked").forEach(fav => {
+                const productCard = fav.closest(".product-card");
+                const productTitle = productCard.querySelector(".product-title").textContent;
+                likedProducts.push(productTitle);
+            });
+            localStorage.setItem("likedProducts", JSON.stringify(likedProducts));
+        }
+
+        // CARGAR LIKES DESDE LOCALSTORAGE
+        function loadLikes() {
+            const likedProducts = JSON.parse(localStorage.getItem("likedProducts") || "[]");
+            
+            document.querySelectorAll(".product-card").forEach(card => {
+                const productTitle = card.querySelector(".product-title").textContent;
+                if (likedProducts.includes(productTitle)) {
+                    const favIcon = card.querySelector(".product-fav");
+                    if (favIcon) {
+                        favIcon.classList.add("liked");
+                    }
+                }
+            });
+        }
+
+        // CARGAR LIKES AL INICIAR LA PÁGINA
+        window.addEventListener("DOMContentLoaded", loadLikes);
+
+        // ABRIR VENTANA DE CONTACTO
+        function openContact() {
+            document.getElementById("contactModal").classList.add("active");
+            document.getElementById("overlay").classList.add("active");
+        }
+
+        // CERRAR VENTANA DE CONTACTO
+        function closeContact() {
+            document.getElementById("contactModal").classList.remove("active");
+            // Solo cerrar overlay si no hay tarjeta expandida
+            if (!document.querySelector(".product-card.expanded")) {
+                document.getElementById("overlay").classList.remove("active");
+            }
+        }
+
+        // TOGGLE HORARIOS
+        function toggleSchedule() {
+            const moreSchedule = document.getElementById("moreSchedule");
+            const toggleText = document.getElementById("scheduleToggleText");
+            
+            if (moreSchedule.classList.contains("show")) {
+                moreSchedule.classList.remove("show");
+                toggleText.textContent = "Ver más...";
+            } else {
+                moreSchedule.classList.add("show");
+                toggleText.textContent = "Ver menos";
+            }
+        }
+
+        // MODIFICAR closeCard para también cerrar contacto
+        function closeCard() {
+            const expanded = document.querySelector(".product-card.expanded");
+            const contactModal = document.getElementById("contactModal");
+            
+            if (expanded) expanded.classList.remove("expanded");
+            if (contactModal.classList.contains("active")) {
+                contactModal.classList.remove("active");
+            }
+            
+            document.getElementById("overlay").classList.remove("active");
+        }
+
+        // TOGGLE BÚSQUEDA
+        function toggleSearch() {
+            const searchModal = document.getElementById("searchModal");
+            searchModal.classList.add("active");
+            document.getElementById("overlay").classList.add("active");
+            document.getElementById("searchInput").focus();
+        }
+
+        // CERRAR BÚSQUEDA
+        function closeSearch() {
+            const searchModal = document.getElementById("searchModal");
+            searchModal.classList.remove("active");
+            document.getElementById("searchInput").value = "";
+            document.getElementById("searchResults").innerHTML = "";
+            if (!document.querySelector(".product-card.expanded") && !document.getElementById("contactModal").classList.contains("active")) {
+                document.getElementById("overlay").classList.remove("active");
+            }
+        }
+
+        // BUSCAR PRODUCTOS
+        function searchProducts() {
+            const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+            const searchResults = document.getElementById("searchResults");
+            
+            if (searchTerm.length < 2) {
+                searchResults.innerHTML = "";
+                return;
+            }
+
+            const allProducts = document.querySelectorAll(".product-card");
+            let resultsHTML = "";
+            let foundCount = 0;
+
+            allProducts.forEach(product => {
+                const title = product.querySelector(".product-title").textContent.toLowerCase();
+                const desc = product.querySelector(".product-desc") ? product.querySelector(".product-desc").textContent.toLowerCase() : "";
+                
+                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                    foundCount++;
+                    const productTitle = product.querySelector(".product-title").textContent;
+                    const productPrice = product.querySelector(".product-price").textContent;
+                    const productImg = product.querySelector(".product-img").src;
+                    
+                    resultsHTML += `
+                        <div class="search-result-item" onclick="scrollToProduct(this, '${productTitle}'); closeSearch();">
+                            <img src="${productImg}" class="result-img">
+                            <div class="result-info">
+                                <h4 class="result-title">${productTitle}</h4>
+                                <p class="result-price">${productPrice}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            if (foundCount === 0) {
+                searchResults.innerHTML = '<p class="no-results">No se encontraron productos</p>';
+            } else {
+                searchResults.innerHTML = resultsHTML;
+            }
+        }
+
+        // SCROLL A PRODUCTO
+        function scrollToProduct(element, productTitle) {
+            const allProducts = document.querySelectorAll(".product-card");
+            allProducts.forEach(product => {
+                if (product.querySelector(".product-title").textContent === productTitle) {
+                    product.scrollIntoView({ behavior: "smooth", block: "center" });
+                    product.style.boxShadow = "0 0 20px rgba(123, 74, 192, 0.6)";
+                    setTimeout(() => {
+                        product.style.boxShadow = "";
+                    }, 2000);
+                }
+            });
+        }
+
+        // TOGGLE FAVORITOS
+        let showingFavorites = false;
+        
+        function toggleFavorites() {
+            showingFavorites = !showingFavorites;
+            const favBtn = document.querySelector(".favorites-btn");
+            const allSections = document.querySelectorAll(".category-section");
+
+            if (showingFavorites) {
+                favBtn.classList.add("active");
+                
+                allSections.forEach(section => {
+                    const sectionProducts = section.querySelectorAll(".product-card");
+                    let hasLiked = false;
+
+                    sectionProducts.forEach(product => {
+                        const favIcon = product.querySelector(".product-fav");
+                        if (favIcon && favIcon.classList.contains("liked")) {
+                            product.style.display = "";
+                            hasLiked = true;
+                        } else {
+                            product.style.display = "none";
+                        }
+                    });
+
+                    // Ocultar sección completa si no tiene productos con like
+                    if (!hasLiked) {
+                        section.style.display = "none";
+                    } else {
+                        section.style.display = "";
+                    }
+                });
+
+                // Verificar si hay favoritos
+                const likedProducts = document.querySelectorAll(".product-fav.liked");
+                if (likedProducts.length === 0) {
+                    alert("No tienes productos favoritos aún. ¡Dale like a tus productos favoritos!");
+                    toggleFavorites();
+                }
+            } else {
+                favBtn.classList.remove("active");
+                
+                // Mostrar todos los productos y secciones
+                allSections.forEach(section => {
+                    section.style.display = "";
+                    const sectionProducts = section.querySelectorAll(".product-card");
+                    sectionProducts.forEach(product => {
+                        product.style.display = "";
+                    });
+                });
+            }
+        }
+
+    </script>
 
 
 
 
-<!-- IMAGEN DE SECCIÓN + TEXTO -->
-<div class="section-block">
-    <img src="Imagenes\Secciones\entradas.webp" class="section-image" alt="Sección">
-    <p class="section-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
+   
+
+
+    
+<!-- VENTANA DE CONTACTO -->
+<div id="contactModal" class="contact-modal">
+    <div class="contact-content">
+        <span class="contact-badge">SEDE ACTUAL</span>
+        <button class="contact-close" onclick="closeContact()"></button>
+        <h2 class="contact-title">Restaurante</h2>
+        <a href="tel:+573185716461" class="contact-phone">+57 318 571 6461</a>
+        <div class="contact-schedule">
+            <div class="schedule-day">
+                <span class="day-name">Lunes:</span>
+                <span class="day-time">6:00 PM - 11:00 PM</span>
+            </div>
+            <div class="more-schedule" id="moreSchedule">
+                <div class="schedule-day">
+                    <span class="day-name">Martes:</span>
+                    <span class="day-time">6:00 PM - 11:00 PM</span>
+                </div>
+                <div class="schedule-day">
+                    <span class="day-name">Miércoles:</span>
+                    <span class="day-time">6:00 PM - 11:00 PM</span>
+                </div>
+                <div class="schedule-day">
+                    <span class="day-name">Jueves:</span>
+                    <span class="day-time">6:00 PM - 11:00 PM</span>
+                </div>
+                <div class="schedule-day">
+                    <span class="day-name">Viernes:</span>
+                    <span class="day-time">6:00 PM - 12:00 AM</span>
+                </div>
+                <div class="schedule-day">
+                    <span class="day-name">Sábado:</span>
+                    <span class="day-time">6:00 PM - 12:00 AM</span>
+                </div>
+                <div class="schedule-day">
+                    <span class="day-name">Domingo:</span>
+                    <span class="day-time">6:00 PM - 11:00 PM</span>
+                </div>
+            </div>
+            <button class="toggle-schedule" onclick="toggleSchedule()">
+                <span id="scheduleToggleText">Ver más...</span>
+            </button>
+        </div>
+    </div>
 </div>
 
+<!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+        <button class="float-btn favorites-btn" onclick="toggleFavorites()" title="Ver favoritos">
+            <span class="btn-icon">♥</span>
+        </button>
+        <button class="float-btn search-btn" onclick="toggleSearch()" title="Buscar productos">
+            <span class="btn-icon">🔍</span>
+        </button>
+    </div>
+
+    <!-- MODAL DE BÚSQUEDA -->
+    <div id="searchModal" class="search-modal">
+        <div class="search-content">
+            <button class="search-close" onclick="closeSearch()">×</button>
+            <h2 class="search-title">Buscar Productos</h2>
+            <input type="text" id="searchInput" class="search-input" placeholder="Escribe el nombre del producto..." onkeyup="searchProducts()">
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </div>
 
 
 
@@ -84,55 +1551,19 @@
 
 
 
-<script>
-    // DESAPARECER LOGO CON SCROLL
-    document.addEventListener("scroll", () => {
-        const header = document.querySelector(".header");
-        if (window.scrollY > 40) {
-            header.classList.add("hide");
-        } else {
-            header.classList.remove("hide");
-        }
-    });
-
-    // SCROLL NAV
-    function scrollNav(amount) {
-        document.getElementById("navScroll").scrollBy({
-            left: amount,
-            behavior: "smooth"
-        });
-    }
-</script>
-
-<script>
-document.addEventListener("scroll", () => {
-    const topButtons = document.querySelector(".top-buttons");
-    const navWrapper = document.querySelector(".nav-wrapper");
-
-    if (window.scrollY > 80) {
-        // hacer sticky
-        topButtons.classList.add("sticky");
-        navWrapper.classList.add("sticky");
-
-        // insertar espaciador si no existe
-        if (!document.querySelector(".sticky-spacer")) {
-            const spacer = document.createElement("div");
-            spacer.classList.add("sticky-spacer");
-            document.body.insertBefore(spacer, document.querySelector(".banner"));
-        }
-
-    } else {
-        // quitar sticky
-        topButtons.classList.remove("sticky");
-        navWrapper.classList.remove("sticky");
-
-        // quitar espaciador
-        const spacer = document.querySelector(".sticky-spacer");
-        if (spacer) spacer.remove();
-    }
-});
-</script>
 
 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
