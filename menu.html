@@ -6,24 +6,69 @@
     <title>Menú</title>
     <link rel="stylesheet" href="menu.css">
 </head>
-<body>
 
+ <!--   AGREGAR ESTO PARA VOLVER UN PRODUCTO RECOMENDADO
+
+<div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
+                
+-->
+
+
+<body>
     <!-- HEADER SUPERIOR -->
     <header class="header">
-        <button class="menu-btn">
+        <a href="index.html" class="logo-link">
+            <img src="Imagenes/Logo.png" class="logo" alt="Hype Burgers"> 
+        </a>
+        <button class="menu-btn" onclick="openMenu()">
             <span></span>
             <span></span>
             <span></span>
         </button>
-     <a href="index.html"><img src="Imagenes/Logo.png" class="logo" alt="Hype Burgers"></a>
     </header>
 
-    <!-- BARRA DE DOS BOTONES -->
+    <!-- OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+    <!-- MENÚ LATERAL -->
+    <div class="side-menu" id="sideMenu">
+        <button class="close-menu" onclick="closeMenu()">×</button>
+        
+        <img src="Imagenes/Logo.png" alt="Hype Burgers" class="menu-logo">
+
+        <!-- SECCIÓN RESTAURANTE -->
+        <div class="menu-section">
+            <button class="menu-toggle" onclick="toggleSection('restaurante')">
+                Restaurante
+                <span class="toggle-arrow" id="arrow-restaurante">▼</span>
+            </button>
+            <div class="menu-content" id="content-restaurante">
+                <a href="menu.html" class="menu-item"><b>Menú</b></a>
+            </div>
+        </div>
+
+        <!-- SECCIÓN MÁS INFORMACIÓN -->
+        <div class="menu-section">
+            <button class="menu-toggle purple" onclick="toggleSection('info')">
+                Más información
+                <span class="toggle-arrow" id="arrow-info">▼</span>
+            </button>
+            <div class="menu-content" id="content-info">
+                <a href="menu.html" class="menu-item">Menú</a>
+                <a href="https://wa.me/573001234567" class="menu-item" target="_blank">WhatsApp</a>
+                <a href="#ubicacion" class="menu-item">Ubicación</a>
+                <a href="#comunidad" class="menu-item">Comunidad</a>
+            </div>
+        </div>
+    </div>
+
+    
    <!-- BARRA DE DOS BOTONES -->
     <div class="top-buttons">
         <div class="top-btn" onclick="openContact()">Contáctanos</div>
         <div class="divider"></div>
-        <div class="top-btn">Recomendados</div>
+        <div class="top-btn" onclick="toggleRecommended()">Recomendados</div>
     </div>
 
     <!-- NAV SCROLLABLE CON FLECHAS -->
@@ -83,7 +128,8 @@
         </div>
 
         <div class="product-grid">
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes\2 Fries\HYPE FRIES.webp" class="product-img">
                 <h3 class="product-title">HYPE FRIES</h3>
                 <p class="product-desc">Carne de 180gr, doble bacon, 360gr de papa, Mix de quesos y dulce de vinagre de manzana</p>
@@ -91,7 +137,8 @@
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes\2 Fries\CHEESE FRIES.webp" class="product-img">
                 <h3 class="product-title">CHEESE FRIES</h3>
                 <p class="product-desc">Papa x300grs Salsa de queso Mozzarela y crema de leche Pechuga salteada en mantequilla y pimienta Cilantro Tocineta crispy</p>
@@ -117,9 +164,10 @@
         </div>
 
         <div class="product-grid">
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/3Especiales/especialde la semana.png" class="product-img">
-                <h3 class="product-title">ESPECIAL 1</h3>
+                <h3 class="product-title">ESPECIAL DE LA SEMANA</h3>
                 <p class="product-desc">🍞Pan de mantequilla 
                     🥩Carne de 180grs
                     🧀Mix de quesos 
@@ -162,7 +210,8 @@
         </div>
 
         <div class="product-grid">
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes\4burgers  de autor\MIXTA POLLO DESMECHADO.webp" class="product-img">
                 <h3 class="product-title">MIXTA POLLO DESMECHADO</h3>
                 <p class="product-desc">🍞Pan HYPE
@@ -200,9 +249,10 @@
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/4burgers  de autor/COSTE.webp" class="product-img">
-                <h3 class="product-title">COSTEÑA</h3>
+                <h3 class="product-title">COSTE</h3>
                 <p class="product-desc">🍞Pan HYPE
                     🥩Carne de 180grs
                     🧀Mix de quesos
@@ -237,7 +287,8 @@
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
             
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/4burgers  de autor/PIMI.webp" class="product-img">
                 <h3 class="product-title">PIMI</h3>
                 <p class="product-desc">🥖Pan HYPE
@@ -267,7 +318,8 @@
         </div>
 
         <div class="product-grid">
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/5Burgers Clasicas/clasica.webp" class="product-img">
                 <h3 class="product-title">CLÁSICA </h3>
                 <p class="product-desc">🥖Pan HYPE 
@@ -285,7 +337,8 @@
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/5Burgers Clasicas/carnivora.webp" class="product-img">
                 <h3 class="product-title">CARNÍVORA</h3>
                 <p class="product-desc">🥖Pan HYPE 
@@ -304,7 +357,8 @@
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/5Burgers Clasicas/CHICKEN.webp" class="product-img">
                 <h3 class="product-title">CHICKEN</h3>
                 <p class="product-desc">🥖Pan HYPE  
@@ -358,55 +412,57 @@
                 <img src="Imagenes/6Burgers Dobles/CLÁSICA DOBLE.webp" class="product-img">
                 <h3 class="product-title">CLÁSICA DOBLE</h3>
                 <p class="product-desc">🥖Pan HYPE
-🥩Doble Carne de 180grs 
-🧀Doble Mix de quesos 
-🥓Doble Tocineta 
-🧅Cebolla caramelizada 
+                                        🥩Doble Carne de 180grs 
+                                        🧀Doble Mix de quesos 
+                                        🥓Doble Tocineta 
+                                        🧅Cebolla caramelizada 
 
-Acompañamientos: 
-🥗Tártara 
-🍍Piña 
-🍀Mayo verde 
-🍟Papa frita x 160grs</p>
+                                        Acompañamientos: 
+                                        🥗Tártara 
+                                        🍍Piña 
+                                        🍀Mayo verde 
+                                        🍟Papa frita x 160grs</p>
                 <p class="product-price">31.400</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/6Burgers Dobles/CARNÍVORA DOBLE.webp" class="product-img">
                 <h3 class="product-title">CARNÍVORA DOBLE</h3>
                 <p class="product-desc">🥖Pan HYPE
-🥩Doble Carne de 180grs 
-🧀Doble Mix de quesos 
-🥓Doble Tocineta 
-🧅Cebolla caramelizada 
-🌭Chorizo ahumado 
+                                        🥩Doble Carne de 180grs 
+                                        🧀Doble Mix de quesos 
+                                        🥓Doble Tocineta 
+                                        🧅Cebolla caramelizada 
+                                        🌭Chorizo ahumado 
 
-Acompañamientos: 
-🥗Tártara 
-🍍Piña 
-🍀Mayo verde 
-🍟Papa frita x 160grs</p>
+                                        Acompañamientos: 
+                                        🥗Tártara 
+                                        🍍Piña 
+                                        🍀Mayo verde 
+                                        🍟Papa frita x 160grs</p>
                 <p class="product-price">32.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+           <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/6Burgers Dobles/MIXTA BABY.webp" class="product-img">
                 <h3 class="product-title">MIXTA BABY</h3>
                 <p class="product-desc">🥖Pan HYPE
-🥩Carne de 180grs 
-🐔Croqueta de pechuga de 200grs
-🧀Mix de quesos 
-🥓Doble Tocineta 
-🧅Cebolla caramelizada 
+                                        🥩Carne de 180grs 
+                                        🐔Croqueta de pechuga de 200grs
+                                        🧀Mix de quesos 
+                                        🥓Doble Tocineta 
+                                        🧅Cebolla caramelizada 
 
 
-Acompañamientos: 
-🥗Tártara 
-🍍Piña 
-🍀Mayo verde 
-🍟Papa frita x 160grs</p>
+                                        Acompañamientos: 
+                                        🥗Tártara 
+                                        🍍Piña 
+                                        🍀Mayo verde 
+                                        🍟Papa frita x 160grs</p>
                 <p class="product-price">31.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
@@ -415,16 +471,16 @@ Acompañamientos:
                 <img src="Imagenes/6Burgers Dobles/DOBLE CHICKEN.webp" class="product-img">
                 <h3 class="product-title">DOBLE CHICKEN</h3>
                 <p class="product-desc">🥖Pan HYPE 
-🐔Doble Croqueta de pechuga de 200grs
-🧀Doble Mix de quesos 
-🥓Doble Tocineta 
-🧅Cebolla caramelizada
+                                        🐔Doble Croqueta de pechuga de 200grs
+                                        🧀Doble Mix de quesos 
+                                        🥓Doble Tocineta 
+                                        🧅Cebolla caramelizada
 
-Acompañamientos: 
-🥗Tártara 
-🍍Piña 
-🍀Mayo verde 
-🍟Papa frita x 160grs</p>
+                                        Acompañamientos: 
+                                        🥗Tártara 
+                                        🍍Piña 
+                                        🍀Mayo verde 
+                                        🍟Papa frita x 160grs</p>
                 <p class="product-price">31.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
@@ -440,21 +496,22 @@ Acompañamientos:
         </div>
 
         <div class="product-grid">
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/7Burgers Triples/TRIPLE FLOW.webp" class="product-img">
                 <h3 class="product-title">TRIPLE FLOW</h3>
                 <p class="product-desc">🥖Pan HYPE
-🥩Doble Carne de 180grs 
-🐔Croqueta de pechuga de 200grs
-🧀Triple Mix de quesos 
-🥓Triple Tocineta 
-🧅Cebolla caramelizada 
+                                        🥩Doble Carne de 180grs 
+                                        🐔Croqueta de pechuga de 200grs
+                                        🧀Triple Mix de quesos 
+                                        🥓Triple Tocineta 
+                                        🧅Cebolla caramelizada 
 
-Acompañamientos: 
-🥗Tártara 
-🍍Piña 
-🍀Mayo verde 
-🍟Papa frita x 160grs</p>
+                                        Acompañamientos: 
+                                        🥗Tártara 
+                                        🍍Piña 
+                                        🍀Mayo verde 
+                                        🍟Papa frita x 160grs</p>
                 <p class="product-price">42.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
@@ -524,16 +581,17 @@ Acompañamientos:
         </div>
 
         <div class="product-grid">
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/8Perros/PERRO HYPE.webp" class="product-img">
                 <h3 class="product-title">PERRO HYPE</h3>
                 <p class="product-desc">🌭Pan HYPE perro
- 🌭Salchicha americana 
- 🐔Pollo desmechado 
- 🥗Tártara 
- 🥓Tocineta crispy 
-🧀Salsa de queso
-25.900</p>
+                                        🌭Salchicha americana 
+                                        🐔Pollo desmechado 
+                                        🥗Tártara 
+                                        🥓Tocineta crispy 
+                                        🧀Salsa de queso
+                                        25.900</p>
                 <p class="product-price">25.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
@@ -542,21 +600,21 @@ Acompañamientos:
                 <img src="Imagenes/8Perros/CRUNCHY DOG.webp" class="product-img">
                 <h3 class="product-title">CRUNCHY DOG</h3>
                 <p class="product-desc">🥖Pan hype
-🐔Pollo apanado x130grs 
-🥗Salsa tártara 
-🥒Pepinillos agridulces encurtidos
-🧀Queso costeño 
-🍅Bbq artesanal (la misma de las minis)
+                                        🐔Pollo apanado x130grs 
+                                        🥗Salsa tártara 
+                                        🥒Pepinillos agridulces encurtidos
+                                        🧀Queso costeño 
+                                        🍅Bbq artesanal (la misma de las minis)
 
-Acompañamientos.
-🥗Tártara 
-💚Mayo verde 
-🍍Piña
-🍟Papa frita x170grs</p>
+                                        Acompañamientos.
+                                        🥗Tártara 
+                                        💚Mayo verde 
+                                        🍍Piña
+                                        🍟Papa frita x170grs</p>
                 <p class="product-price">23.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
-<!--
+                        <!--
             <div class="product-card" onclick="expandCard(this)">
                 <img src="Imagenes/8perros/perro3.webp" class="product-img">
                 <h3 class="product-title">PERRO COSTEÑO</h3>
@@ -573,7 +631,9 @@ Acompañamientos.
                 <p class="product-price">19.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
--->
+                                    -->
+    </section>
+
     <!-- ===== SECCIÓN MINIS ===== -->
     <section class="category-section" id="minis">
         <div class="section-block minis-block">
@@ -582,7 +642,8 @@ Acompañamientos.
         </div>
 
         <div class="product-grid">
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/9Minis/572d17b8-898d-4487-adf6-9ea8d576b533.webp" class="product-img">
                 <h3 class="product-title">MINI HYPES X10</h3>
                 <p class="product-desc">10 mini HYPE con Bbq artesanal </p>
@@ -629,7 +690,8 @@ Acompañamientos.
         </div>
 
         <div class="product-grid">
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/10Tenders/CHICKEN TENDERS.webp" class="product-img">
                 <h3 class="product-title">CHICKEN TENDERS</h3>
                 <p class="product-desc">🐔Pollo HYPE apanado x5 🍟Papa x160grs </p>
@@ -637,7 +699,8 @@ Acompañamientos.
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/10Tenders/DORITENDERS.webp" class="product-img">
                 <h3 class="product-title">DORITENDERS</h3>
                 <p class="product-desc">450GRS DE POLLITO HYPE BIEN JUGOSO
@@ -694,44 +757,47 @@ PAPA FRITA X170GRS</p>
                 <img src="Imagenes/11Combos/COMBO DOBLE.webp" class="product-img">
                 <h3 class="product-title">COMBO DOBLE</h3>
                 <p class="product-desc">1 CLASICA DOBLE
-1 CARNIVORA DOBLE
-1 MIXTA BABY
-TODAS TRAEN PAPA
-3 GASEOSAS PET250</p>
+                                        1 CARNIVORA DOBLE
+                                        1 MIXTA BABY
+                                        TODAS TRAEN PAPA
+                                        3 GASEOSAS PET250</p>
                 <p class="product-price">90.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/11Combos/COMBO FAMI.webp" class="product-img">
                 <h3 class="product-title">COMBO FAMI</h3>
                 <p class="product-desc">1 CLASICA
-1 CARNIVORA
-1 CHICKEN
-TODAS TRAEN PAPA
-3 GASEOSAS PET250</p>
+                                        1 CARNIVORA
+                                        1 CHICKEN
+                                        TODAS TRAEN PAPA
+                                        3 GASEOSAS PET250</p>
                 <p class="product-price">73.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/11Combos/COMBO PIMI STRIPPED.webp" class="product-img">
                 <h3 class="product-title">COMBO PIMI STRIPPED</h3>
                 <p class="product-desc">1 PIMI 
-1 STRIPPED 
-1 BACON FRIES 
- 2 GASEOSA PET250</p>
+                                        1 STRIPPED 
+                                        1 BACON FRIES 
+                                        2 GASEOSA PET250</p>
                 <p class="product-price">70.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/11Combos/COMBO MASTER.webp" class="product-img">
                 <h3 class="product-title">COMBO MASTER</h3>
                 <p class="product-desc">1 CLASICA 
-1 CARNÍVORA 
-TODAS TRAEN PAPA
-2 BEBIDAS PET250. </p>
+                                        1 CARNÍVORA 
+                                        TODAS TRAEN PAPA
+                                        2 BEBIDAS PET250. </p>
                 <p class="product-price">51.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
@@ -740,9 +806,9 @@ TODAS TRAEN PAPA
                 <img src="Imagenes/11Combos/COMBO DEPECHE.webp" class="product-img">
                 <h3 class="product-title">COMBO DEPECHE</h3>
                 <p class="product-desc">2 CARNIVORAS
-1 HOMIES FRIES
-LAS BURGERS TRAEN PAPA
-3 GASEOSAS PET250</p>
+                                        1 HOMIES FRIES
+                                        LAS BURGERS TRAEN PAPA
+                                        3 GASEOSAS PET250</p>
                 <p class="product-price">75.900</p>
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
@@ -814,7 +880,8 @@ LAS BURGERS TRAEN PAPA
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
             <!--  <img src="Imagenes/12adiciones/adicion1.webp" class="product-img">    -->
                 <h3 class="product-title">POLLO DESMECHADO</h3>
             <!-- <p class="product-desc">🥓Tocineta crispy x3 Perfecta para agregar a cualquier burger o perro</p>     -->
@@ -897,7 +964,8 @@ LAS BURGERS TRAEN PAPA
                 <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
             </div>
 
-            <div class="product-card" onclick="expandCard(this)">
+            <div class="product-card" onclick="expandCard(this)" data-recommended="true">
+                <span class="recommended-badge">Recomendado</span>
                 <img src="Imagenes/12Cocteles/MOSCOW MULE.webp" class="product-img">
                 <h3 class="product-title">MOSCOW MULE</h3>
                 <p class="product-desc">Vodka, Zumo de limón,  Ginger beer</p>
@@ -1471,6 +1539,91 @@ function closeCard() {
             }
         }
 
+
+ function openMenu() {
+            document.getElementById('sideMenu').classList.add('active');
+            document.getElementById('menuOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            document.getElementById('sideMenu').classList.remove('active');
+            document.getElementById('menuOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleSection(section) {
+            const content = document.getElementById('content-' + section);
+            const arrow = document.getElementById('arrow-' + section);
+            
+            content.classList.toggle('active');
+            arrow.classList.toggle('rotated');
+        }
+
+
+// Variable global para saber si estamos mostrando recomendados
+let showingRecommended = false;
+
+// FUNCIÓN PARA TOGGLE DE RECOMENDADOS
+function toggleRecommended() {
+    showingRecommended = !showingRecommended;
+    const allSections = document.querySelectorAll(".category-section");
+    
+    if (showingRecommended) {
+        // Resaltar el botón de recomendados
+        const recommendedBtn = document.querySelectorAll('.top-btn')[1];
+        if (recommendedBtn) {
+            recommendedBtn.style.background = '#FF6B6B';
+            recommendedBtn.style.fontWeight = 'bold';
+        }
+        
+        allSections.forEach(section => {
+            const sectionProducts = section.querySelectorAll(".product-card");
+            let hasRecommended = false;
+
+            sectionProducts.forEach(product => {
+                if (product.getAttribute('data-recommended') === 'true') {
+                    product.style.display = "";
+                    hasRecommended = true;
+                } else {
+                    product.style.display = "none";
+                }
+            });
+
+            // Ocultar sección completa si no tiene productos recomendados
+            if (!hasRecommended) {
+                section.style.display = "none";
+            } else {
+                section.style.display = "";
+            }
+        });
+
+        // Verificar si hay productos recomendados
+        const recommendedProducts = document.querySelectorAll('[data-recommended="true"]');
+        if (recommendedProducts.length === 0) {
+            alert("¡Aún no hay productos recomendados! 🌟");
+            toggleRecommended(); // Volver a mostrar todo
+        }
+    } else {
+        // Quitar resaltado del botón
+        const recommendedBtn = document.querySelectorAll('.top-btn')[1];
+        if (recommendedBtn) {
+            recommendedBtn.style.background = '';
+            recommendedBtn.style.fontWeight = '';
+        }
+        
+        // Mostrar todos los productos y secciones
+        allSections.forEach(section => {
+            section.style.display = "";
+            const sectionProducts = section.querySelectorAll(".product-card");
+            sectionProducts.forEach(product => {
+                product.style.display = "";
+            });
+        });
+    }
+}
+
+
     </script>
 
 
@@ -1544,7 +1697,6 @@ function closeCard() {
             <div id="searchResults" class="search-results"></div>
         </div>
     </div>
-
 
 
 
