@@ -1,33 +1,201 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hype Burgers</title>
+    
+    <!-- SEO Meta Tags Principales -->
+    <title>Hype Burgers Bucaramanga - Hamburguesas Artesanales y Fries Gourmet | Delivery</title>
+    <meta name="description" content="🍔 Las mejores hamburguesas artesanales de Bucaramanga. Fries especiales, perros gourmet y cócteles. Delivery disponible. ¡Ordena ahora! ☎️ 318 571 6461">
+    <meta name="keywords" content="hype burgers, hamburguesas bucaramanga, burgers artesanales colombia, fries especiales, comida gourmet bucaramanga, delivery hamburguesas, restaurante bucaramanga, burgers de autor, hamburguesas santander">
+    <meta name="author" content="Hype Burgers">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="google190779d7b571ec16" />
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="CO-SAN">
+    <meta name="geo.placename" content="Bucaramanga">
+    <meta name="geo.position" content="7.1193;-73.1227">
+    <meta name="ICBM" content="7.1193, -73.1227">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hypeburgers-cloud.github.io/HYPEburgers/">
+    <meta property="og:title" content="Hype Burgers - Las Mejores Hamburguesas Artesanales de Bucaramanga">
+    <meta property="og:description" content="🍔 Hamburguesas artesanales, fries especiales y mucho más. Delivery en Bucaramanga. ¡Ordena ya! ☎️ 318 571 6461">
+    <meta property="og:image" content="https://hypeburgers-cloud.github.io/HYPEburgers/Imagenes/Logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo de Hype Burgers">
+    <meta property="og:site_name" content="Hype Burgers">
+    <meta property="og:locale" content="es_CO">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://hypeburgers-cloud.github.io/HYPEburgers/">
+    <meta name="twitter:title" content="Hype Burgers - Hamburguesas Artesanales Bucaramanga">
+    <meta name="twitter:description" content="🍔 Las mejores hamburguesas de Bucaramanga. Delivery disponible. ¡Ordena ahora!">
+    <meta name="twitter:image" content="https://hypeburgers-cloud.github.io/HYPEburgers/Imagenes/Logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hypeburgers-cloud.github.io/HYPEburgers/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Imagenes/Logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Imagenes/Logo.png">
+    
+    <!-- Preconnect para optimizar carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- CSS inline para accesibilidad -->
+    <style>
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #7B4AC0;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        .skip-to-content:focus {
+            top: 0;
+        }
+    </style>
+    
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Hype Burgers",
+      "image": "https://hypeburgers-cloud.github.io/HYPEburgers/Imagenes/Logo.png",
+      "logo": "https://hypeburgers-cloud.github.io/HYPEburgers/Imagenes/Logo.png",
+      "@id": "https://hypeburgers-cloud.github.io/HYPEburgers/",
+      "url": "https://hypeburgers-cloud.github.io/HYPEburgers/",
+      "telephone": "+573185716461",
+      "priceRange": "$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogotá",
+        "addressRegion": "Bogotá D.C.",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 4.7110,
+        "longitude": -74.0721
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+          "opens": "18:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "18:00",
+          "closes": "00:00"
+        }
+      ],
+      "servesCuisine": "Hamburguesas Artesanales, Comida Gourmet",
+      "acceptsReservations": "False",
+      "menu": "https://hypeburgers-cloud.github.io/HYPEburgers/menu.html",
+      "sameAs": [
+        "https://www.instagram.com/hypeburgersco/",
+        "https://wa.me/573154317957"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Hype Burgers",
+      "url": "https://hypeburgers-cloud.github.io/HYPEburgers/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://hypeburgers-cloud.github.io/HYPEburgers/menu.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 
 </head>
 <body>
 
-<div class="contenido">
+<!-- Skip to main content para accesibilidad -->
+<a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
-    <!-- LOGO -->
-    <img src="Imagenes/Logo.png" class="logo" alt="Hype Burgers">
+<main id="main-content" class="contenido">
 
-    <!-- BOTONES -->
-    <div class="botones">
-        <a href="menu.html" class="btn">Menú</a>
-        <a href="https://api.whatsapp.com/send?phone=573154317957" class="btn">WhatsApp</a>
-        <a href="https://www.instagram.com/hypeburgersco/" class="btn">Instagram</a>
+    <!-- LOGO con alt descriptivo -->
+    <img src="Imagenes/Logo.png" class="logo" alt="Hype Burgers - Logo oficial del restaurante de hamburguesas artesanales en Bogotá" width="300" height="300">
+
+    <!-- Encabezado oculto para SEO -->
+    <h1 style="position: absolute; left: -9999px;">Hype Burgers - Las Mejores Hamburguesas Artesanales de Bogotá</h1>
+
+    <!-- BOTONES con aria-labels para accesibilidad -->
+    <nav class="botones" role="navigation" aria-label="Navegación principal">
+        <a href="menu.html" class="btn" aria-label="Ver menú completo de hamburguesas y productos">
+            Menú
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=573154317957" 
+           class="btn" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="Contactar por WhatsApp - Ordena tus hamburguesas ahora">
+            WhatsApp
+        </a>
+        <a href="https://www.instagram.com/hypeburgersco/" 
+           class="btn" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="Síguenos en Instagram - Fotos de nuestras hamburguesas">
+            Instagram
+        </a>
+    </nav>
+
+    <!-- Contenido adicional oculto para SEO -->
+    <div style="position: absolute; left: -9999px;">
+        <h2>Restaurante de Hamburguesas Gourmet en Bogotá</h2>
+        <p>Hype Burgers es el mejor restaurante de hamburguesas artesanales en Bogotá. Ofrecemos burgers de autor, fries especiales, perros gourmet, tenders, combos y cócteles. Servicio de delivery disponible. Horarios: Lunes a Jueves de 6:00 PM a 11:00 PM, Viernes y Sábado de 6:00 PM a 12:00 AM.</p>
+        <p>Teléfono: +57 318 571 6461</p>
+        <p>Ubicación: Bogotá, Colombia</p>
     </div>
 
-   
-    
+</main>
 
-</div>
+<!-- Nota: Google Analytics está comentado. Para habilitarlo:
+     1. Ve a https://analytics.google.com
+     2. Crea una propiedad para tu sitio
+     3. Obtén tu ID de seguimiento (comienza con G-)
+     4. Reemplaza G-XXXXXXXXXX con tu ID
+     5. Descomenta el código siguiente
+-->
+
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
 
 </body>
 </html>
-
-
