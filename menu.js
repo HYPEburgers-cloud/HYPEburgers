@@ -39,9 +39,9 @@
     }
   }
 
-  // Mostrar el popup 400ms después de que carga la página
-  window.addEventListener('load', function () {
-    setTimeout(openBannerPopup, 400);
+  // Mostrar el popup apenas el HTML esté listo (no espera imágenes)
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(openBannerPopup, 300);
   });
 })();
 
