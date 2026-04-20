@@ -98,7 +98,7 @@
 
 
 
-    <!-- BANNER POPUP (ANUNCIO AL ENTRAR) -->
+    <!-- BANNER POPUP (ANUNCIO AL ENTRAR)
     <div class="banner-popup-overlay" id="bannerPopupOverlay" onclick="closeBannerPopup(event)">
         <div class="banner-popup-box" id="bannerPopupBox">
             <button class="banner-popup-close" onclick="closeBannerPopupDirect()">&times;</button>
@@ -109,7 +109,23 @@
             </a>
         </div>
     </div>
+ -->
 
+<!-- BANNER POPUP (QUITAR EL LUNES 27) -->
+    <div class="banner-popup-overlay" id="bannerPopupOverlay" onclick="closeBannerPopup(event)">
+        <div class="banner-popup-box" id="bannerPopupBox">
+            <button class="banner-popup-close" onclick="closeBannerPopupDirect()">&times;</button>
+            <img src="Imagenes/Especial de la semana/banner quitar el 27.jpeg" class="banner-popup-img"
+                alt="Especial de la semana">
+            <a href="#especiales" class="banner-popup-btn" onclick="closeBannerPopupDirect()">
+                🔥 VER ESPECIAL DE LA SEMANA
+            </a>
+        </div>
+    </div>
+
+
+
+    
 
 
     <!-- ===== SECCIÓN ENTRADAS ===== -->
@@ -179,7 +195,7 @@
             <p class="section-text especiales-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
         </div>
 
-        <!-- TARJETA ESPECIAL DE LA SEMANA -->
+        <!-- TARJETA ESPECIAL DE LA SEMANA 
         <div class="especial-semana-wrapper">
             <div class="especial-semana-card">
                 <span class="especial-badge-top">⭐ ESPECIAL DE LA SEMANA</span>
@@ -205,7 +221,7 @@
                     🍍Piña
                     </p>
 
-                    <!-- TABLA DE PRECIOS -->
+                    <!-- TABLA DE PRECIOS 
                     <div class="especial-price-table">
                         <div class="especial-price-header">
                             <span></span>
@@ -233,11 +249,64 @@
         </div>
     </section>
 
-    <!-- LIGHTBOX ESPECIAL DE LA SEMANA -->
+    <!-- LIGHTBOX ESPECIAL DE LA SEMANA 
     <div class="especial-lightbox-overlay" id="especialLightboxOverlay" onclick="closeEspecialLightbox(event)">
         <div class="especial-lightbox-box">
             <button class="especial-lightbox-close" onclick="closeEspecialLightboxDirect()">&#x2715;</button>
             <img src="Imagenes/3Especiales/especial 14.04.2026.jpeg" class="especial-lightbox-img"
+                alt="Especial de la semana">
+        </div>
+    </div>
+
+    -->
+
+
+
+        <!-- TARJETA ESPECIAL DE LA SEMANA -->
+        <div class="especial-semana-wrapper">
+            <div class="especial-semana-card">
+                <span class="especial-badge-top">⭐ ESPECIAL DE LA SEMANA</span>
+                <div class="product-fav especial-fav" onclick="toggleLike(event, this)">♡</div>
+
+                <img src="Imagenes/3Especiales/especial quitar el 27.jpeg" class="especial-semana-img"
+                    alt="Especial de la semana" onclick="openEspecialLightbox()" title="Toca para ver en grande">
+
+                <div class="especial-semana-body">
+                    <p class="especial-semana-desc">
+                    🍞Pan HYPE.
+                    🥜Mantequilla de maní 
+                    🥩Carne de 180grs al carbón 
+                    🥯Mix de quesos 
+                    🧀Queso pera apanado
+                    🫐Mermelada de frutos rojos (artesanal) 
+                    🧅Cebolla crispy
+                    </p>
+
+                    <!-- TABLA DE PRECIOS -->
+                    <div class="especial-price-table">
+                        <div class="especial-price-header">
+                            <span></span>
+                            <span>🍟 SIN PAPAS</span>
+                            <span>🍟 CON PAPAS</span>
+                            <span>🍟 CON PAPAS Y GASEOSA</span>
+                        </div>
+                        <div class="especial-price-row">
+                            <span class="especial-price-label">ESPECIAL</span>
+                            <span class="especial-price-val">$21.000</span>
+                            <span class="especial-price-val highlighted">$27.000</span>
+                            <span class="especial-price-val highlighted">$33.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX ESPECIAL DE LA SEMANA -->
+    <div class="especial-lightbox-overlay" id="especialLightboxOverlay" onclick="closeEspecialLightbox(event)">
+        <div class="especial-lightbox-box">
+            <button class="especial-lightbox-close" onclick="closeEspecialLightboxDirect()">&#x2715;</button>
+            <img src="Imagenes/3Especiales/especial quitar el 27.jpeg" class="especial-lightbox-img"
                 alt="Especial de la semana">
         </div>
     </div>
