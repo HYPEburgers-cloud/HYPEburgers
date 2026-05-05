@@ -77,7 +77,7 @@
     <div class="nav-wrapper">
         <button class="nav-arrow left" onclick="scrollNav(-150)">❮</button>
         <nav class="nav-scroll" id="navScroll">
-            <a href="#entradas">Entradas</a>
+      <!--  <a href="#entradas">Entradas</a> -->
             <a href="#fries">Fries</a>
             <a href="#especiales">Especiales</a>
             <a href="#burgers-autor">Burgers de autor</a>
@@ -102,7 +102,7 @@
     <div class="banner-popup-overlay" id="bannerPopupOverlay" onclick="closeBannerPopup(event)">
         <div class="banner-popup-box" id="bannerPopupBox">
             <button class="banner-popup-close" onclick="closeBannerPopupDirect()">&times;</button>
-            <img src="Imagenes/Especial de la semana/banner 14.04.2026.jpeg" class="banner-popup-img"
+            <img src="Imagenes/Especial de la semana/banner 05.05.2026.jpeg" class="banner-popup-img"
                 alt="Especial de la semana">
             <a href="#especiales" class="banner-popup-btn" onclick="closeBannerPopupDirect()">
                 🔥 VER ESPECIAL DE LA SEMANA
@@ -117,7 +117,7 @@
     
 
 
-    <!-- ===== SECCIÓN ENTRADAS ===== -->
+    <!-- ===== SECCIÓN ENTRADAS ===== 
     <section class="category-section" id="entradas">
         <div class="section-block entradas-block">
             <img src="Imagenes\Secciones\entradas.webp" class="section-image entradas-image" alt="Entradas">
@@ -137,7 +137,7 @@
             </div>
         </div>
     </section>
-
+ -->
 
     <!-- ===== SECCIÓN FRIES ===== -->
     <section class="category-section" id="fries">
@@ -190,24 +190,24 @@
                 <span class="especial-badge-top">⭐ ESPECIAL DE LA SEMANA</span>
                 <div class="product-fav especial-fav" onclick="toggleLike(event, this)">♡</div>
 
-                <img src="Imagenes/3Especiales/especial 14.04.2026.jpeg" class="especial-semana-img"
+                <img src="Imagenes/3Especiales/especial 05.05.2026.jpeg" class="especial-semana-img"
                     alt="Especial de la semana" onclick="openEspecialLightbox()" title="Toca para ver en grande">
 
                 <div class="especial-semana-body">
                     <p class="especial-semana-desc">
-                    🍞Pan HYPE 
-                    🥩Carne de 180grs
-                    🧀Mix de quesos 
-                    🧅Aros de cebolla x2
-                    🫑Mayonesa de pimentón 
-                    🥬Batavia y cebolla morada cruda 
-                    🫐Brazo, pierna y chicharrón de cerdo ahumado y terminado en Bbq de mora
-                    
-                    💸Acompañamientos:
-                    🍟Papa frita x170grs
-                    🥗Tartara 
-                    🍀Mayonesa verde
-                    🍍Piña
+                🍞Pan HYPE 
+                🥩Carne de 180grs al carbón 
+                🧄Mayonesa de ajos y apio 
+                🥬Espinaca 
+                🧀Mix de quesos 
+                🥓Tocineta 
+                🐷Chicharrón ahumado y terminado en salsa ranchera 
+                
+                Acompañamiento.
+                🍟Papa frita 
+                🥗Tártara 
+                💚Mayo verde
+                🍍Piña
                     </p>
 
                     <!-- TABLA DE PRECIOS -->
@@ -242,7 +242,7 @@
     <div class="especial-lightbox-overlay" id="especialLightboxOverlay" onclick="closeEspecialLightbox(event)">
         <div class="especial-lightbox-box">
             <button class="especial-lightbox-close" onclick="closeEspecialLightboxDirect()">&#x2715;</button>
-            <img src="Imagenes/3Especiales/especial 14.04.2026.jpeg" class="especial-lightbox-img"
+            <img src="Imagenes/3Especiales/especial 05.05.2026.jpeg" class="especial-lightbox-img"
                 alt="Especial de la semana">
         </div>
     </div>
@@ -281,7 +281,7 @@
             </div>
 
             <div class="product-card" onclick="expandCard(this)">
-                <img src="Imagenes\4burgers  de autor\73d5f842-87c7-4812-8aa0-0987281e1c0e (2).webp"
+                <img src="Imagenes\4burgers  de autor\STRIPPED.jpeg"
                     class="product-img">
                 <h3 class="product-title">STRIPPED</h3>
                 <p class="product-desc">🥖Pan HYPE
@@ -340,7 +340,7 @@
 
             <div class="product-card" onclick="expandCard(this)" data-recommended="true">
                 <span class="recommended-badge">Recomendado</span>
-                <img src="Imagenes/4burgers  de autor/PIMI.webp" class="product-img">
+                <img src="Imagenes/4burgers  de autor/pimi.jpeg" class="product-img">
                 <h3 class="product-title">PIMI</h3>
                 <p class="product-desc">🥖Pan HYPE
                     🥩Carne de 180grs
@@ -652,6 +652,7 @@
                         <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
                     </div>
 
+          <!--           
                     <div class="product-card" onclick="expandCard(this)">
                         <img src="Imagenes/8Perros/CRUNCHY DOG.webp" class="product-img">
                         <h3 class="product-title">CRUNCHY DOG</h3>
@@ -669,7 +670,8 @@
                             🍟Papa frita x170grs</p>
                         <p class="product-price">25.900</p>
                         <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
-                    </div>
+                    </div>  -->
+                    
                     <!--
             <div class="product-card" onclick="expandCard(this)">
                 <img src="Imagenes/8perros/perro3.webp" class="product-img">
@@ -745,7 +747,7 @@
                     <p class="section-text tenders-text">TODOS LOS PRODUCTOS TIENEN INCLUIDO EL IMPUESTO AL CONSUMO.</p>
                 </div>
 
-                <div class="product-grid">
+            <!--   <div class="product-grid">
                     <div class="product-card" onclick="expandCard(this)" data-recommended="true">
                         <span class="recommended-badge">Recomendado</span>
                         <img src="Imagenes/10Tenders/CHICKEN TENDERS.webp" class="product-img">
@@ -754,7 +756,7 @@
                             🐔Pollo HYPE apanado x5 🍟Papa x160grs </p>
                         <p class="product-price">30.000</p>
                         <div class="product-fav" onclick="toggleLike(event, this)">♡</div>
-                    </div>
+                    </div>  -->
 
                     <div class="product-card" onclick="expandCard(this)" data-recommended="true">
                         <span class="recommended-badge">Recomendado</span>
